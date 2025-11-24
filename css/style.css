@@ -1,0 +1,99 @@
+html{
+    scroll-behavior: smooth;
+}
+body {
+    background-color: #dedede;
+    padding: 5px;
+    margin: 15px;
+    font-size: 25px;
+    font-family:Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    font-family:Arial, sans-serif;
+    font-size: 1.95em;
+}
+
+h2{
+    text-align:center;
+  }
+
+li{
+    margin-top: 20px;
+}
+
+img{
+    border: 5px solid blue;
+    border-radius: 35px;
+    width: 100%;
+  }
+
+.label{
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Mobile first: grid con 1 columna y 10px de gap */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Una sola columna */
+    gap: 10px; /* espacio entre filas y columnas */
+}
+
+/* Mantener imágenes redondas por defecto si quieres, o cuadradas */
+.grid figure {
+    border-radius: 0; /* sin borde redondeado */
+}
+
+@media screen and (min-width: 772px) {
+    .grid {
+        grid-template-columns: 1fr 1fr; /* dos columnas */
+    }
+
+    .grid figure {
+        border-radius: 50%; /* hacer círculos */
+    }
+
+    .grid figure:last-child {
+        grid-column: span 2; /* última figura ocupa ambas columnas */
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .grid figure {
+        border-radius: 0; /* eliminar borde redondeado */
+    }
+
+    /* Cada tercer figure ocupa dos columnas */
+    .grid figure:nth-child(3n) {
+        grid-column: span 2;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto; /* quita la animación de scroll */
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .grid figure {
+        background-color: #333; /* fondo oscuro */
+        color: #ffea70; /* texto amarillo claro */
+        border-color: black; /* borde negro */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
